@@ -15,4 +15,6 @@ deb:
 
 [0.0.2-dev](https://github.com/HermitMatrixNetwork/HermitMatrixNetwork/releases/download/v0.0.2/hermitmatrixnetwork_0.0.2-dev_amd64.deb)
 
+
+推荐使用最新的deb包
 [0.0.3-dev](https://github.com/HermitMatrixNetwork/HermitMatrixNetwork/releases/download/v0.0.3/hermitmatrixnetwork_0.0.3-dev_amd64.deb)
