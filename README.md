@@ -28,9 +28,12 @@
   - 合约快速上手
   - 合约列表
 - 链上数据获取
-   * 链上接口
-   * 交易获取查询语法
+   - 链上接口
+   - 交易获取查询语法
    - 交易类型整理 
-
+   - events
+   - grpc_rest
+   
+   
 推荐使用最新的deb包
 [0.0.3-dev](https://github.com/HermitMatrixNetwork/HermitMatrixNetwork/releases/download/v0.0.3/hermitmatrixnetwork_0.0.3-dev_amd64.deb)
