@@ -83,33 +83,33 @@
 
 ```json
 "bank": {
-      "params": {
+    "params": {
         "send_enabled": [],
         "default_send_enabled": true
-      },
-      "balances": [
+    },
+    "balances": [
         {
-          "address": "ghm15v4z6h7wjcrdx0pygxyvk3naaupgk6a64lfkt8",
-          "coins": [
-            {
-              "denom": "uGHM",
-              "amount": "10000000000000"
-            }
-          ]
+            "address": "ghm15v4z6h7wjcrdx0pygxyvk3naaupgk6a64lfkt8",
+            "coins": [
+                {
+                    "denom": "uGHM",
+                    "amount": "10000000000000"
+                }
+            ]
         }
-      ],
-      "supply": [],
-      "denom_metadata": []
-    },
+    ],
+    "supply": [],
+    "denom_metadata": []
+},
 ```
 
 
 
 ```json
-    "capability": {
-      "index": "1",
-      "owners": []
-    },
+"capability": {
+    "index": "1",
+    "owners": []
+},
 ```
 
 
@@ -117,56 +117,56 @@
 
 
 ```json
-    "compute": {
-      "codes": [],
-      "contracts": [],
-      "sequences": []
-    }
+"compute": {
+    "codes": [],
+    "contracts": [],
+    "sequences": []
+}
 ```
 
 
 
 ```json
-    "crisis": {
-      "constant_fee": {
+"crisis": {
+    "constant_fee": {
         "denom": "uGHM",
         "amount": "1000"
-      }
-    },
+    }
+},
 ```
 
 
 
 ```json
-    "distribution": {
-      "params": {
+"distribution": {
+    "params": {
         "community_tax": "0.020000000000000000",
         "base_proposer_reward": "0.010000000000000000",
         "bonus_proposer_reward": "0.040000000000000000",
         "withdraw_addr_enabled": true,
         "secret_foundation_tax": "0.000000000000000000",
         "secret_foundation_address": ""
-      },
-      "fee_pool": {
-        "community_pool": []
-      },
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
     },
+    "fee_pool": {
+        "community_pool": []
+    },
+    "delegator_withdraw_infos": [],
+    "previous_proposer": "",
+    "outstanding_rewards": [],
+    "validator_accumulated_commissions": [],
+    "validator_historical_rewards": [],
+    "validator_current_rewards": [],
+    "delegator_starting_infos": [],
+    "validator_slash_events": []
+},
 ```
 
 
 
 ```json
 "evidence": {
-      "evidence": []
-    },
+    "evidence": []
+},
 ```
 
 
@@ -255,57 +255,57 @@
 
 
 ```json
-    "gov": {
-      "starting_proposal_id": "1",
-      "deposits": [],
-      "votes": [],
-      "proposals": [],
-      "deposit_params": {
+"gov": {
+    "starting_proposal_id": "1",
+    "deposits": [],
+    "votes": [],
+    "proposals": [],
+    "deposit_params": {
         "min_deposit": [
-          {
-            "denom": "uGHM",
-            "amount": "10000000"
-          }
+            {
+                "denom": "uGHM",
+                "amount": "10000000"
+            }
         ],
         "max_deposit_period": "172800s"
-      },
-      "voting_params": {
+    },
+    "voting_params": {
         "voting_period": "172800s"
-      },
-      "tally_params": {
+    },
+    "tally_params": {
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000"
-      }
-    },
+    }
+},
 ```
 
 
 
 ```json
-   "ibc": {
-      "client_genesis": {
+"ibc": {
+    "client_genesis": {
         "clients": [],
         "clients_consensus": [],
         "clients_metadata": [],
         "params": {
-          "allowed_clients": [
-            "06-solomachine",
-            "07-tendermint"
-          ]
+            "allowed_clients": [
+                "06-solomachine",
+                "07-tendermint"
+            ]
         },
         "create_localhost": false,
         "next_client_sequence": "0"
-      },
-      "connection_genesis": {
+    },
+    "connection_genesis": {
         "connections": [],
         "client_connection_paths": [],
         "next_connection_sequence": "0",
         "params": {
-          "max_expected_time_per_block": "30000000000"
+            "max_expected_time_per_block": "30000000000"
         }
-      },
-      "channel_genesis": {
+    },
+    "channel_genesis": {
         "channels": [],
         "acknowledgements": [],
         "commitments": [],
@@ -314,41 +314,39 @@
         "recv_sequences": [],
         "ack_sequences": [],
         "next_channel_sequence": "0"
-      }
-    },
-    "icamsgauth": null,
-    "interchainaccounts": {
-      "controller_genesis_state": {
+    }
+},
+"icamsgauth": null,
+"interchainaccounts": {
+    "controller_genesis_state": {
         "active_channels": [],
         "interchain_accounts": [],
         "ports": [],
         "params": {
-          "controller_enabled": true
+            "controller_enabled": true
         }
-      },
-      "host_genesis_state": {
+    },
+    "host_genesis_state": {
         "active_channels": [],
         "interchain_accounts": [],
         "port": "icahost",
         "params": {
-          "host_enabled": true,
-          "allow_messages": []
+            "host_enabled": true,
+            "allow_messages": []
         }
-      }
-    },
+    }
+},
 ```
 
 
 
-
-
 ```json
-    "mint": {
-      "minter": {
+"mint": {
+    "minter": {
         "inflation": "0.130000000000000000",
         "annual_provisions": "0.000000000000000000"
-      },
-      "params": {
+    },
+    "params": {
         "mint_denom": "uGHM",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
@@ -356,8 +354,8 @@
         "goal_bonded": "0.670000000000000000",
         "blocks_per_year": "6311520",
         "max_token_supply": "10000000000000000000"
-      }
-    },
+    }
+},
 ```
 
 
@@ -370,30 +368,30 @@
 
 ```json
 "register": {
-      "registration": [],
-      "node_exch_master_certificate": {
+    "registration": [],
+    "node_exch_master_certificate": {
         "bytes": ""
-      },
-      "io_master_certificate": {
-        "bytes": ""
-      }
     },
+    "io_master_certificate": {
+        "bytes": ""
+    }
+},
 ```
 
 
 
 ```json
-    "slashing": {
-      "params": {
+"slashing": {
+    "params": {
         "signed_blocks_window": "100",
         "min_signed_per_window": "0.500000000000000000",
         "downtime_jail_duration": "600s",
         "slash_fraction_double_sign": "0.050000000000000000",
         "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": [],
-      "missed_blocks": []
     },
+    "signing_infos": [],
+    "missed_blocks": []
+},
 ```
 
 
@@ -420,18 +418,18 @@
 
 
 ```json
-    "transfer": {
-      "port_id": "transfer",
-      "denom_traces": [],
-      "params": {
+"transfer": {
+    "port_id": "transfer",
+    "denom_traces": [],
+    "params": {
         "send_enabled": true,
         "receive_enabled": true
-      }
-    },
+    }
+},
 ```
 
 ```json
-    "upgrade": {},
-    "vesting": {}
+"upgrade": {},
+"vesting": {}
 ```
 

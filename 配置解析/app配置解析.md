@@ -1,6 +1,10 @@
 # app 配置解析
 
+由 Cosmos SDK 生成，用于配置应用程序
+
 app.toml 配置文件路径：  .ghmd/config/app.toml
+
+
 
 常用的应用配置
 

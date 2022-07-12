@@ -1,6 +1,6 @@
 # config 配置解析
 
-config.toml 是一个高级配置，更多是对tendermint。
+config.toml 用于配置 Tendermint. 在[Tendermint 的文档了解更多](https://docs.tendermint.com/master/nodes/configuration.html)
 
 
 
