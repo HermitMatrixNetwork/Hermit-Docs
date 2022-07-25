@@ -1,5 +1,7 @@
 # genesis 配置解析
 
+各个模块的详细信息：https://docs.cosmos.network/v0.46/modules/
+
 - 共识参数
 - app_state
   - auth
@@ -19,6 +21,8 @@
   - transfer
   - upgrade
   - vesting
+
+### 基本配置
 
 ```json
 {
@@ -48,7 +52,9 @@
 }
 ```
 
-- app_state  给个模块可配置的参数在这个字段里面
+### 各个模块参数
+
+#### auth
 
 ```json
 "auth": {
@@ -71,7 +77,7 @@
     }
 ```
 
-
+#### authz
 
 ```json
  "authz": {
@@ -79,7 +85,7 @@
     },
 ```
 
-
+#### bank
 
 ```json
 "bank": {
@@ -103,7 +109,7 @@
 },
 ```
 
-
+#### capability
 
 ```json
 "capability": {
@@ -112,9 +118,7 @@
 },
 ```
 
-
-
-
+#### compute
 
 ```json
 "compute": {
@@ -124,7 +128,7 @@
 }
 ```
 
-
+#### crisis
 
 ```json
 "crisis": {
@@ -135,7 +139,7 @@
 },
 ```
 
-
+#### distribution
 
 ```json
 "distribution": {
@@ -161,7 +165,7 @@
 },
 ```
 
-
+#### evidence
 
 ```json
 "evidence": {
@@ -169,15 +173,15 @@
 },
 ```
 
-
+#### feegrant
 
 ```json
-    "feegrant": {
-      "allowances": []
-    },
+"feegrant": {
+    "allowances": []
+},
 ```
 
-
+#### genutil
 
 ```json
 "genutil": {
@@ -252,7 +256,7 @@
     },
 ```
 
-
+#### gov
 
 ```json
 "gov": {
@@ -280,7 +284,7 @@
 },
 ```
 
-
+#### ibc
 
 ```json
 "ibc": {
@@ -338,7 +342,7 @@
 },
 ```
 
-
+#### mint
 
 ```json
 "mint": {
@@ -358,13 +362,13 @@
 },
 ```
 
-
+#### params
 
 ```json
 "params": null,
 ```
 
-
+#### register
 
 ```json
 "register": {
@@ -378,7 +382,7 @@
 },
 ```
 
-
+#### slashing
 
 ```json
 "slashing": {
@@ -394,7 +398,7 @@
 },
 ```
 
-
+#### staking
 
 ```json
 "staking": {
@@ -415,7 +419,7 @@
     },
 ```
 
-
+#### transfer
 
 ```json
 "transfer": {
@@ -427,9 +431,15 @@
     }
 },
 ```
+#### upgrade
 
 ```json
-"upgrade": {},
+"upgrade": {}
+```
+
+#### vesting
+
+```json
 "vesting": {}
 ```
 

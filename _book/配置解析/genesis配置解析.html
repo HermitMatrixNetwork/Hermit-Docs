@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../验证人/README.md" />
+    <link rel="next" href="../验证人/" />
     
     
     <link rel="prev" href="client配置解析.html" />
@@ -109,9 +109,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../节点搭建/README.md">
+        <li class="chapter " data-level="2.1" data-path="../节点搭建/">
             
-                <span>
+                <a href="../节点搭建/">
             
                     
                     节点搭建
@@ -174,9 +174,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="README.md">
+        <li class="chapter " data-level="3.1" data-path="./">
             
-                <span>
+                <a href="./">
             
                     
                     配置解析
@@ -252,9 +252,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../验证人/README.md">
+        <li class="chapter " data-level="4.1" data-path="../验证人/">
             
-                <span>
+                <a href="../验证人/">
             
                     
                     验证人
@@ -317,9 +317,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../委托人/README.md">
+        <li class="chapter " data-level="5.1" data-path="../委托人/">
             
-                <span>
+                <a href="../委托人/">
             
                     
                     委托人
@@ -369,9 +369,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../治理/README.md">
+        <li class="chapter " data-level="6.1" data-path="../治理/">
             
-                <span>
+                <a href="../治理/">
             
                     
                     治理
@@ -434,9 +434,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../合约教程/README.md">
+        <li class="chapter " data-level="7.1" data-path="../合约教程/">
             
-                <span>
+                <a href="../合约教程/">
             
                     
                     合约教程
@@ -486,9 +486,9 @@
         
         
     
-        <li class="chapter " data-level="8.1" data-path="../链上数据获取/README.md">
+        <li class="chapter " data-level="8.1" data-path="../链上数据获取/">
             
-                <span>
+                <a href="../链上数据获取/">
             
                     
                     链上数据获取
@@ -603,6 +603,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="genesis-&#x914D;&#x7F6E;&#x89E3;&#x6790;">genesis &#x914D;&#x7F6E;&#x89E3;&#x6790;</h1>
+<p>&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;<a href="https://docs.cosmos.network/v0.46/modules/" target="_blank">https://docs.cosmos.network/v0.46/modules/</a></p>
 <ul>
 <li>&#x5171;&#x8BC6;&#x53C2;&#x6570;</li>
 <li>app_state<ul>
@@ -626,6 +627,7 @@
 </ul>
 </li>
 </ul>
+<h3 id="&#x57FA;&#x672C;&#x914D;&#x7F6E;">&#x57FA;&#x672C;&#x914D;&#x7F6E;</h3>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;genesis_time&quot;</span>: <span class="hljs-string">&quot;2022-06-16T06:50:23.979018759Z&quot;</span>,
   <span class="hljs-string">&quot;chain_id&quot;</span>: <span class="hljs-string">&quot;ghmdev&quot;</span>,
@@ -652,9 +654,8 @@
     ......
 }
 </code></pre>
-<ul>
-<li>app_state  &#x7ED9;&#x4E2A;&#x6A21;&#x5757;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#x5728;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x91CC;&#x9762;</li>
-</ul>
+<h3 id="&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x53C2;&#x6570;">&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x53C2;&#x6570;</h3>
+<h4 id="auth">auth</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;auth&quot;</span>: {
       <span class="hljs-string">&quot;params&quot;</span>: {
         <span class="hljs-string">&quot;max_memo_characters&quot;</span>: <span class="hljs-string">&quot;256&quot;</span>,
@@ -674,10 +675,12 @@
       ]
     }
 </code></pre>
+<h4 id="authz">authz</h4>
 <pre><code class="lang-json"> <span class="hljs-string">&quot;authz&quot;</span>: {
       <span class="hljs-string">&quot;authorization&quot;</span>: []
     },
 </code></pre>
+<h4 id="bank">bank</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;bank&quot;</span>: {
     <span class="hljs-string">&quot;params&quot;</span>: {
         <span class="hljs-string">&quot;send_enabled&quot;</span>: [],
@@ -698,17 +701,20 @@
     <span class="hljs-string">&quot;denom_metadata&quot;</span>: []
 },
 </code></pre>
+<h4 id="capability">capability</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;capability&quot;</span>: {
     <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
     <span class="hljs-string">&quot;owners&quot;</span>: []
 },
 </code></pre>
+<h4 id="compute">compute</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;compute&quot;</span>: {
     <span class="hljs-string">&quot;codes&quot;</span>: [],
     <span class="hljs-string">&quot;contracts&quot;</span>: [],
     <span class="hljs-string">&quot;sequences&quot;</span>: []
 }
 </code></pre>
+<h4 id="crisis">crisis</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;crisis&quot;</span>: {
     <span class="hljs-string">&quot;constant_fee&quot;</span>: {
         <span class="hljs-string">&quot;denom&quot;</span>: <span class="hljs-string">&quot;uGHM&quot;</span>,
@@ -716,6 +722,7 @@
     }
 },
 </code></pre>
+<h4 id="distribution">distribution</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;distribution&quot;</span>: {
     <span class="hljs-string">&quot;params&quot;</span>: {
         <span class="hljs-string">&quot;community_tax&quot;</span>: <span class="hljs-string">&quot;0.020000000000000000&quot;</span>,
@@ -738,14 +745,17 @@
     <span class="hljs-string">&quot;validator_slash_events&quot;</span>: []
 },
 </code></pre>
+<h4 id="evidence">evidence</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;evidence&quot;</span>: {
     <span class="hljs-string">&quot;evidence&quot;</span>: []
 },
 </code></pre>
-<pre><code class="lang-json">    <span class="hljs-string">&quot;feegrant&quot;</span>: {
-      <span class="hljs-string">&quot;allowances&quot;</span>: []
-    },
+<h4 id="feegrant">feegrant</h4>
+<pre><code class="lang-json"><span class="hljs-string">&quot;feegrant&quot;</span>: {
+    <span class="hljs-string">&quot;allowances&quot;</span>: []
+},
 </code></pre>
+<h4 id="genutil">genutil</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;genutil&quot;</span>: {
       <span class="hljs-string">&quot;gen_txs&quot;</span>: [
         {
@@ -817,6 +827,7 @@
       ]
     },
 </code></pre>
+<h4 id="gov">gov</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;gov&quot;</span>: {
     <span class="hljs-string">&quot;starting_proposal_id&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
     <span class="hljs-string">&quot;deposits&quot;</span>: [],
@@ -841,6 +852,7 @@
     }
 },
 </code></pre>
+<h4 id="ibc">ibc</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;ibc&quot;</span>: {
     <span class="hljs-string">&quot;client_genesis&quot;</span>: {
         <span class="hljs-string">&quot;clients&quot;</span>: [],
@@ -895,6 +907,7 @@
     }
 },
 </code></pre>
+<h4 id="mint">mint</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;mint&quot;</span>: {
     <span class="hljs-string">&quot;minter&quot;</span>: {
         <span class="hljs-string">&quot;inflation&quot;</span>: <span class="hljs-string">&quot;0.130000000000000000&quot;</span>,
@@ -911,8 +924,10 @@
     }
 },
 </code></pre>
+<h4 id="params">params</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;params&quot;</span>: <span class="hljs-literal">null</span>,
 </code></pre>
+<h4 id="register">register</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;register&quot;</span>: {
     <span class="hljs-string">&quot;registration&quot;</span>: [],
     <span class="hljs-string">&quot;node_exch_master_certificate&quot;</span>: {
@@ -923,6 +938,7 @@
     }
 },
 </code></pre>
+<h4 id="slashing">slashing</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;slashing&quot;</span>: {
     <span class="hljs-string">&quot;params&quot;</span>: {
         <span class="hljs-string">&quot;signed_blocks_window&quot;</span>: <span class="hljs-string">&quot;100&quot;</span>,
@@ -935,6 +951,7 @@
     <span class="hljs-string">&quot;missed_blocks&quot;</span>: []
 },
 </code></pre>
+<h4 id="staking">staking</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;staking&quot;</span>: {
       <span class="hljs-string">&quot;params&quot;</span>: {
         <span class="hljs-string">&quot;unbonding_time&quot;</span>: <span class="hljs-string">&quot;1814400s&quot;</span>,
@@ -952,6 +969,7 @@
       <span class="hljs-string">&quot;exported&quot;</span>: <span class="hljs-literal">false</span>
     },
 </code></pre>
+<h4 id="transfer">transfer</h4>
 <pre><code class="lang-json"><span class="hljs-string">&quot;transfer&quot;</span>: {
     <span class="hljs-string">&quot;port_id&quot;</span>: <span class="hljs-string">&quot;transfer&quot;</span>,
     <span class="hljs-string">&quot;denom_traces&quot;</span>: [],
@@ -961,8 +979,11 @@
     }
 },
 </code></pre>
-<pre><code class="lang-json"><span class="hljs-string">&quot;upgrade&quot;</span>: {},
-<span class="hljs-string">&quot;vesting&quot;</span>: {}
+<h4 id="upgrade">upgrade</h4>
+<pre><code class="lang-json"><span class="hljs-string">&quot;upgrade&quot;</span>: {}
+</code></pre>
+<h4 id="vesting">vesting</h4>
+<pre><code class="lang-json"><span class="hljs-string">&quot;vesting&quot;</span>: {}
 </code></pre>
 
                                 
@@ -996,7 +1017,7 @@
                 </a>
                 
                 
-                <a href="../验证人/README.md" class="navigation navigation-next " aria-label="Next page: 验证人">
+                <a href="../验证人/" class="navigation navigation-next " aria-label="Next page: 验证人">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1007,7 +1028,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"genesis配置解析","level":"3.1.4","depth":2,"next":{"title":"验证人","level":"4.1","depth":1,"path":"验证人/README.md","ref":"./验证人/README.md","articles":[{"title":"验证器操作指南","level":"4.1.1","depth":2,"path":"验证人/验证器操作指南.md","ref":"./验证人/验证器操作指南.md","articles":[]},{"title":"验证器常见的问题","level":"4.1.2","depth":2,"path":"验证人/验证器常见的问题.md","ref":"./验证人/验证器常见的问题.md","articles":[]},{"title":"验证器的安全","level":"4.1.3","depth":2,"path":"验证人/验证器的安全.md","ref":"./验证人/验证器的安全.md","articles":[]}]},"previous":{"title":"client配置解析","level":"3.1.3","depth":2,"path":"配置解析/client配置解析.md","ref":"./配置解析/client配置解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"配置解析/genesis配置解析.md","mtime":"2022-07-11T09:29:59.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-12T02:37:25.922Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"genesis配置解析","level":"3.1.4","depth":2,"next":{"title":"验证人","level":"4.1","depth":1,"path":"验证人/README.md","ref":"./验证人/README.md","articles":[{"title":"验证器操作指南","level":"4.1.1","depth":2,"path":"验证人/验证器操作指南.md","ref":"./验证人/验证器操作指南.md","articles":[]},{"title":"验证器常见的问题","level":"4.1.2","depth":2,"path":"验证人/验证器常见的问题.md","ref":"./验证人/验证器常见的问题.md","articles":[]},{"title":"验证器的安全","level":"4.1.3","depth":2,"path":"验证人/验证器的安全.md","ref":"./验证人/验证器的安全.md","articles":[]}]},"previous":{"title":"client配置解析","level":"3.1.3","depth":2,"path":"配置解析/client配置解析.md","ref":"./配置解析/client配置解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"配置解析/genesis配置解析.md","mtime":"2022-07-25T08:03:29.493Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-25T08:05:49.341Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

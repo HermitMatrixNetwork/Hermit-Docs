@@ -60,7 +60,7 @@
     <link rel="next" href="config配置解析.html" />
     
     
-    <link rel="prev" href="README.md" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -109,9 +109,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../节点搭建/README.md">
+        <li class="chapter " data-level="2.1" data-path="../节点搭建/">
             
-                <span>
+                <a href="../节点搭建/">
             
                     
                     节点搭建
@@ -174,9 +174,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="README.md">
+        <li class="chapter " data-level="3.1" data-path="./">
             
-                <span>
+                <a href="./">
             
                     
                     配置解析
@@ -252,9 +252,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../验证人/README.md">
+        <li class="chapter " data-level="4.1" data-path="../验证人/">
             
-                <span>
+                <a href="../验证人/">
             
                     
                     验证人
@@ -317,9 +317,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../委托人/README.md">
+        <li class="chapter " data-level="5.1" data-path="../委托人/">
             
-                <span>
+                <a href="../委托人/">
             
                     
                     委托人
@@ -369,9 +369,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../治理/README.md">
+        <li class="chapter " data-level="6.1" data-path="../治理/">
             
-                <span>
+                <a href="../治理/">
             
                     
                     治理
@@ -434,9 +434,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../合约教程/README.md">
+        <li class="chapter " data-level="7.1" data-path="../合约教程/">
             
-                <span>
+                <a href="../合约教程/">
             
                     
                     合约教程
@@ -486,9 +486,9 @@
         
         
     
-        <li class="chapter " data-level="8.1" data-path="../链上数据获取/README.md">
+        <li class="chapter " data-level="8.1" data-path="../链上数据获取/">
             
-                <span>
+                <a href="../链上数据获取/">
             
                     
                     链上数据获取
@@ -616,6 +616,276 @@
 <li>&#x72B6;&#x6001;&#x540C;&#x6B65;&#x914D;&#x7F6E;</li>
 <li>wasm vm &#x5185;&#x5B58;&#x914D;&#x7F6E;</li>
 </ul>
+<h3 id="app&#x57FA;&#x672C;&#x914D;&#x7F6E;">app&#x57FA;&#x672C;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                           Base Configuration                            ###</span>
+<span class="hljs-comment">###############################################################################</span>
+
+<span class="hljs-comment"># The minimum gas prices a validator is willing to accept for processing a</span>
+<span class="hljs-comment"># transaction. A transaction&apos;s fees must meet the minimum of any denomination</span>
+<span class="hljs-comment"># specified in this config (e.g. 0.25token1;0.0001token2).</span>
+<span class="hljs-comment"># &#x9A8C;&#x8BC1;&#x4EBA;&#x5904;&#x7406;&#x4EA4;&#x6613;&#x7684;&#x6700;&#x4F4E;&#x53EF;&#x63A5;&#x53D7;&#x7684; gas-prices</span>
+<span class="hljs-comment"># &#x4EA4;&#x6613;&#x8D39;&#x7528;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x6B64;&#x914D;&#x7F6E;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x4F55;&#x9762;&#x989D;&#x7684;&#x6700;&#x4F4E;&#x8981;&#x6C42;</span>
+<span class="hljs-attr">minimum-gas-prices</span> = <span class="hljs-string">&quot;0.0125uGHM&quot;</span>
+
+<span class="hljs-comment"># default: the last 100 states are kept in addition to every 500th state; pruning at 10 block intervals</span>
+<span class="hljs-comment"># nothing: all historic states will be saved, nothing will be deleted (i.e. archiving node)</span>
+<span class="hljs-comment"># everything: all saved states will be deleted, storing only the current and previous state; pruning at 10 block intervals</span>
+<span class="hljs-comment"># custom: allow pruning options to be manually specified through &apos;pruning-keep-recent&apos;, &apos;pruning-keep-every&apos;, and &apos;pruning-interval&apos;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x662F;&#x72B6;&#x6001;&#x4FEE;&#x526A;&#x7B56;&#x7565;&#x914D;&#x7F6E;&#xFF0C;&#x6709;&#x56DB;&#x4E2A;&#x9009;&#x9879;&#xFF1A;</span>
+<span class="hljs-comment"># default:</span>
+<span class="hljs-comment"># nothing:</span>
+<span class="hljs-comment"># everything:</span>
+<span class="hljs-comment"># custom:</span>
+<span class="hljs-attr">pruning</span> = <span class="hljs-string">&quot;default&quot;</span>
+
+<span class="hljs-comment"># These are applied if and only if the pruning strategy is custom.</span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x9009;&#x4E86; custom &#x4FEE;&#x5EFA;&#x7B56;&#x7565;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#x4E00;&#x4E0B;&#x53C2;&#x6570;</span>
+<span class="hljs-attr">pruning-keep-recent</span> = <span class="hljs-string">&quot;0&quot;</span>
+<span class="hljs-attr">pruning-keep-every</span> = <span class="hljs-string">&quot;0&quot;</span>
+<span class="hljs-attr">pruning-interval</span> = <span class="hljs-string">&quot;0&quot;</span>
+
+<span class="hljs-comment"># HaltHeight contains a non-zero block height at which a node will gracefully</span>
+<span class="hljs-comment"># halt and shutdown that can be used to assist upgrades and testing.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Note: Commitment of state will be attempted on the corresponding block.</span>
+
+<span class="hljs-comment"># HaltHeight &#x5305;&#x542B;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x7684;&#x5757;&#x9AD8;&#x5EA6;&#xFF0C;&#x8282;&#x70B9;&#x5C06;&#x5728;&#x8BE5;&#x9AD8;&#x5EA6;&#x5904;&#x4F18;&#x96C5;&#x5730;&#x505C;&#x6B62;&#x548C;&#x5173;&#x95ED;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x534F;&#x52A9;&#x5347;&#x7EA7;&#x548C;&#x6D4B;&#x8BD5;&#x3002;</span>
+<span class="hljs-comment"># Note: &#x5C06;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x5757;&#x4E0A;&#x5C1D;&#x8BD5;&#x63D0;&#x4EA4;&#x72B6;&#x6001;</span>
+<span class="hljs-attr">halt-height</span> = <span class="hljs-number">0</span>
+
+<span class="hljs-comment"># HaltTime contains a non-zero minimum block time (in Unix seconds) at which</span>
+<span class="hljs-comment"># a node will gracefully halt and shutdown that can be used to assist upgrades</span>
+<span class="hljs-comment"># and testing.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Note: Commitment of state will be attempted on the corresponding block.</span>
+<span class="hljs-comment"># HaltTime &#x5305;&#x542B;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x7684;&#x6700;&#x5C0F;&#x963B;&#x585E;&#x65F6;&#x95F4;&#xFF08;&#x4EE5; Unix &#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#xFF0C;&#x5728;&#x8BE5;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x5C06;&#x4F18;&#x96C5;&#x5730;&#x505C;&#x6B62;&#x548C;&#x5173;&#x95ED;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x534F;&#x52A9;&#x5347;&#x7EA7;&#x548C;&#x6D4B;&#x8BD5;&#x3002;</span>
+<span class="hljs-attr">halt-time</span> = <span class="hljs-number">0</span>
+
+<span class="hljs-comment"># MinRetainBlocks defines the minimum block height offset from the current</span>
+<span class="hljs-comment"># block being committed, such that all blocks past this offset are pruned</span>
+<span class="hljs-comment"># from Tendermint. It is used as part of the process of determining the</span>
+<span class="hljs-comment"># ResponseCommit.RetainHeight value during ABCI Commit. A value of 0 indicates</span>
+<span class="hljs-comment"># that no blocks should be pruned.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># This configuration value is only responsible for pruning Tendermint blocks.</span>
+<span class="hljs-comment"># It has no bearing on application state pruning which is determined by the</span>
+<span class="hljs-comment"># &quot;pruning-*&quot; configurations.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Note: Tendermint block pruning is dependant on this parameter in conunction</span>
+<span class="hljs-comment"># with the unbonding (safety threshold) period, state pruning and state sync</span>
+<span class="hljs-comment"># snapshot parameters to determine the correct minimum value of</span>
+<span class="hljs-comment"># ResponseCommit.RetainHeight.</span>
+
+<span class="hljs-comment"># MinRetainBlocks &#x5B9A;&#x4E49;&#x4E86;&#x4E0E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x63D0;&#x4EA4;&#x7684;&#x5757;&#x7684;&#x6700;&#x5C0F;&#x5757;&#x9AD8;&#x5EA6;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x8FD9;&#x6837;&#x6240;&#x6709;&#x8D85;&#x8FC7;&#x6B64;&#x504F;&#x79FB;&#x91CF;&#x7684;&#x5757;&#x90FD;&#x5C06;&#x4ECE; </span>
+<span class="hljs-comment"># Tendermint &#x4E2D;&#x5220;&#x9664;&#x3002; &#x5B83;&#x7528;&#x4F5C;&#x5728; ABCI &#x63D0;&#x4EA4;&#x671F;&#x95F4;&#x786E;&#x5B9A; ResponseCommit.RetainHeight &#x503C;&#x7684;&#x8FC7;&#x7A0B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002; </span>
+<span class="hljs-comment"># &#x503C; 0 &#x8868;&#x793A;&#x4E0D;&#x5E94;&#x4FEE;&#x526A;&#x4EFB;&#x4F55;&#x5757;&#x3002;</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &#x6B64;&#x914D;&#x7F6E;&#x503C;&#x4EC5;&#x8D1F;&#x8D23;&#x4FEE;&#x526A; Tendermint &#x5757;&#x3002;&#x5B83;&#x4E0E;&#x7531;&#x201C;pruning-*&#x201D;&#x914D;&#x7F6E;&#x786E;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x72B6;&#x6001;&#x4FEE;&#x526A;&#x65E0;&#x5173;&#x3002;</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># Note:Tendermint &#x5757;&#x4FEE;&#x526A;&#x4F9D;&#x8D56;&#x4E8E;&#x6B64;&#x53C2;&#x6570;&#x4E0E;&#x89E3;&#x7ED1;&#xFF08;&#x5B89;&#x5168;&#x9608;&#x503C;&#xFF09;&#x5468;&#x671F;&#x3001;&#x72B6;&#x6001;&#x4FEE;&#x526A;&#x548C;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x5FEB;&#x7167;&#x53C2;&#x6570;&#x4E00;&#x8D77;&#x786E;</span>
+<span class="hljs-comment"># ResponseCommit.RetainHeight &#x7684;&#x6B63;&#x786E;&#x6700;&#x5C0F;&#x503C;&#x3002;</span>
+<span class="hljs-attr">min-retain-blocks</span> = <span class="hljs-number">0</span>
+
+<span class="hljs-comment"># InterBlockCache enables inter-block caching.</span>
+<span class="hljs-comment"># &#x542F;&#x7528;&#x5757;&#x7F13;&#x5B58;</span>
+<span class="hljs-attr">inter-block-cache</span> = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># IndexEvents defines the set of events in the form {eventType}.{attributeKey},</span>
+<span class="hljs-comment"># which informs Tendermint what to index. If empty, all events will be indexed.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Example:</span>
+<span class="hljs-comment"># [&quot;message.sender&quot;, &quot;message.recipient&quot;]</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># IndexEvents &#x4EE5; {eventType}.{attributeKey} &#x7684;&#x5F62;&#x5F0F;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x96C6;&#xFF0C;&#x901A;&#x77E5; Tendermint &#x8981;&#x7D22;&#x5F15;&#x7684;&#x5185;&#x5BB9;&#x3002; </span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#x90FD;&#x5C06;&#x88AB;&#x7D22;&#x5F15;&#x3002;</span>
+<span class="hljs-attr">index-events</span> = []
+
+<span class="hljs-comment"># IavlCacheSize set the size of the iavl tree cache. </span>
+<span class="hljs-comment"># Default cache size is 50mb.</span>
+<span class="hljs-comment"># IavlCacheSize &#x8BBE;&#x7F6E;iavl &#x6811;&#x7F13;&#x5B58;&#x7684;&#x5927;&#x5C0F;&#x3002;&#x9ED8;&#x8BA4;&#x662F;50mb</span>
+<span class="hljs-attr">iavl-cache-size</span> = <span class="hljs-number">781250</span>
+</code></pre>
+<h3 id="telemetry-&#x914D;&#x7F6E;">Telemetry &#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml">###############################################################################
+###                         Telemetry Configuration                         ###
+###############################################################################
+
+[telemetry]
+
+# Prefixed with keys to separate services.
+# &#x533A;&#x5206;&#x670D;&#x52A1;&#x7684;key&#x524D;&#x7F00;
+service-name = &quot;&quot;
+
+# Enabled enables the application telemetry functionality. When enabled,
+# an in-memory sink is also enabled by default. Operators may also enabled
+# other sinks such as Prometheus.
+# Enabled &#x542F;&#x7528;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9065;&#x6D4B;&#x529F;&#x80FD;&#x3002; 
+# &#x542F;&#x7528;&#x540E;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x4F1A;&#x542F;&#x7528;&#x5185;&#x5B58;&#x63A5;&#x6536;&#x5668;&#x3002; &#x8FD0;&#x8425;&#x8005;&#x8FD8;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x5176;&#x4ED6;&#x63A5;&#x6536;&#x5668;&#xFF0C;&#x4F8B;&#x5982; Prometheus&#x3002;
+enabled = false
+
+# Enable prefixing gauge values with hostname.
+# &#x542F;&#x7528;&#x5E26;&#x6709;&#x4E3B;&#x673A;&#x540D;&#x7684;&#x4EEA;&#x8868;&#x503C;&#x524D;&#x7F00;&#x3002;
+enable-hostname = false
+
+# Enable adding hostname to labels.
+# &#x542F;&#x7528;&#x5C06;&#x4E3B;&#x673A;&#x540D;&#x6DFB;&#x52A0;&#x5230;&#x6807;&#x7B7E;&#x3002;
+enable-hostname-label = false
+
+# Enable adding service to labels.
+# &#x542F;&#x7528;&#x5C06;&#x670D;&#x52A1;&#x540D;&#x6DFB;&#x52A0;&#x5230;&#x6807;&#x7B7E;&#x3002;
+enable-service-label = false
+
+# PrometheusRetentionTime, when positive, enables a Prometheus metrics sink.
+# PrometheusRetentionTime &#x4E3A;&#x6B63;&#x65F6;&#xFF0C;&#x542F;&#x7528; Prometheus &#x6307;&#x6807;&#x63A5;&#x6536;&#x5668;&#x3002;
+prometheus-retention-time = 0
+
+# GlobalLabels defines a global set of name/value label tuples applied to all
+# metrics emitted using the wrapper functions defined in telemetry package.
+#
+# Example:
+# [[&quot;chain_id&quot;, &quot;cosmoshub-1&quot;]]
+# GlobalLabels &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7EC4;&#x5168;&#x5C40;&#x540D;&#x79F0;/&#x503C;&#x6807;&#x7B7E;&#x5143;&#x7EC4;&#xFF0C;&#x5E94;&#x7528;&#x4E8E;&#x4F7F;&#x7528;&#x76D1;&#x63A7;&#x5305;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5305;&#x88C5;&#x51FD;&#x6570;&#x53D1;&#x51FA;&#x7684;&#x6240;&#x6709;metrics&#x3002;
+global-labels = [
+]
+</code></pre>
+<h3 id="api&#x914D;&#x7F6E;">api&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                           API Configuration                             ###</span>
+<span class="hljs-comment">###############################################################################</span>
+<span class="hljs-section">
+[api]</span>
+
+<span class="hljs-comment"># Enable defines if the API server should be enabled.</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x542F;&#x7528;api&#x670D;&#x52A1;</span>
+<span class="hljs-attr">enable</span> = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># Swagger defines if swagger documentation should automatically be registered.</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x5F00;&#x542F;swagger&#x6587;&#x6863;&#x670D;&#x52A1;</span>
+<span class="hljs-attr">swagger</span> = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># Address defines the API server to listen on.</span>
+<span class="hljs-comment"># api &#x76D1;&#x542C;&#x7AEF;&#x53E3;</span>
+<span class="hljs-attr">address</span> = <span class="hljs-string">&quot;tcp://0.0.0.0:1317&quot;</span>
+
+<span class="hljs-comment"># MaxOpenConnections defines the number of maximum open connections.</span>
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x6700;&#x5927;&#x8FDE;&#x63A5;&#x6570;</span>
+<span class="hljs-attr">max-open-connections</span> = <span class="hljs-number">1000</span>
+
+<span class="hljs-comment"># RPCReadTimeout defines the Tendermint RPC read timeout (in seconds).</span>
+<span class="hljs-comment"># &#x5B9A;&#x4E49; Tendermint RPC &#x8BFB;&#x53D6;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+<span class="hljs-attr">rpc-read-timeout</span> = <span class="hljs-number">10</span>
+
+<span class="hljs-comment"># RPCWriteTimeout defines the Tendermint RPC write timeout (in seconds).</span>
+<span class="hljs-comment"># &#x5B9A;&#x4E49; Tendermint RPC &#x5199;&#x5165;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</span>
+<span class="hljs-attr">rpc-write-timeout</span> = <span class="hljs-number">0</span>
+
+<span class="hljs-comment"># RPCMaxBodyBytes defines the Tendermint maximum response body (in bytes).</span>
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E86; Tendermint &#x6700;&#x5927;&#x54CD;&#x5E94;body&#x7684;&#x5927;&#x5C0F;</span>
+<span class="hljs-attr">rpc-max-body-bytes</span> = <span class="hljs-number">1000000</span>
+
+<span class="hljs-comment"># EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).</span>
+<span class="hljs-attr">enabled-unsafe-cors</span> = <span class="hljs-literal">true</span>
+</code></pre>
+<h3 id="rosetta&#x914D;&#x7F6E;">rosetta&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                           Rosetta Configuration                         ###</span>
+<span class="hljs-comment">###############################################################################</span>
+<span class="hljs-section">
+[rosetta]</span>
+
+<span class="hljs-comment"># Enable defines if the Rosetta API server should be enabled.</span>
+<span class="hljs-attr">enable</span> = <span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># Address defines the Rosetta API server to listen on.</span>
+<span class="hljs-attr">address</span> = <span class="hljs-string">&quot;:8080&quot;</span>
+
+<span class="hljs-comment"># Network defines the name of the blockchain that will be returned by Rosetta.</span>
+<span class="hljs-attr">blockchain</span> = <span class="hljs-string">&quot;app&quot;</span>
+
+<span class="hljs-comment"># Network defines the name of the network that will be returned by Rosetta.</span>
+<span class="hljs-attr">network</span> = <span class="hljs-string">&quot;network&quot;</span>
+
+<span class="hljs-comment"># Retries defines the number of retries when connecting to the node before failing.</span>
+<span class="hljs-attr">retries</span> = <span class="hljs-number">3</span>
+
+<span class="hljs-comment"># Offline defines if Rosetta server should run in offline mode.</span>
+<span class="hljs-attr">offline</span> = <span class="hljs-literal">false</span>
+</code></pre>
+<h3 id="grpc&#x914D;&#x7F6E;">grpc&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                           gRPC Configuration                            ###</span>
+<span class="hljs-comment">###############################################################################</span>
+<span class="hljs-section">
+[grpc]</span>
+
+<span class="hljs-comment"># Enable defines if the gRPC server should be enabled.</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x5F00;&#x542F;grpc&#x670D;&#x52A1;</span>
+<span class="hljs-attr">enable</span> = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># Address defines the gRPC server address to bind to.</span>
+<span class="hljs-comment"># grpc&#x670D;&#x52A1;&#x76D1;&#x542C;&#x7AEF;&#x53E3;</span>
+<span class="hljs-attr">address</span> = <span class="hljs-string">&quot;0.0.0.0:9090&quot;</span>
+</code></pre>
+<h3 id="grpc-web&#x914D;&#x7F6E;">grpc web&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                        gRPC Web Configuration                           ###</span>
+<span class="hljs-comment">###############################################################################</span>
+<span class="hljs-section">
+[grpc-web]</span>
+
+<span class="hljs-comment"># GRPCWebEnable defines if the gRPC-web should be enabled.</span>
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> gRPC must also be enabled, otherwise, this configuration is a no-op.</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x5F00;&#x542F;grpc web&#x670D;&#x52A1;</span>
+<span class="hljs-comment"># &#x5982;&#x679C;&#x5F00;&#x542F;&#xFF0C; &#x90A3;&#x4E48;grpc &#x4E5F;&#x9700;&#x8981;&#x5F00;&#x542F;</span>
+<span class="hljs-attr">enable</span> = <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># Address defines the gRPC-web server address to bind to.</span>
+<span class="hljs-comment"># &#x670D;&#x52A1;&#x76D1;&#x542C;&#x7AEF;&#x53E3;</span>
+<span class="hljs-attr">address</span> = <span class="hljs-string">&quot;0.0.0.0:9091&quot;</span>
+
+<span class="hljs-comment"># EnableUnsafeCORS defines if CORS should be enabled (unsafe - use it at your own risk).</span>
+<span class="hljs-comment">#enable-unsafe-cors = false</span>
+<span class="hljs-comment"># &#x662F;&#x5426;&#x5F00;&#x542F;&#x8DE8;&#x57DF;</span>
+<span class="hljs-attr">enable-unsafe-cors</span> = <span class="hljs-literal">true</span>
+</code></pre>
+<h3 id="&#x72B6;&#x6001;&#x540C;&#x6B65;&#x914D;&#x7F6E;">&#x72B6;&#x6001;&#x540C;&#x6B65;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-comment">###############################################################################</span>
+<span class="hljs-comment">###                        State Sync Configuration                         ###</span>
+<span class="hljs-comment">###############################################################################</span>
+
+<span class="hljs-comment"># State sync snapshots allow other nodes to rapidly join the network without replaying historical</span>
+<span class="hljs-comment"># blocks, instead downloading and applying a snapshot of the application state at a given height.</span>
+<span class="hljs-comment"># &#x72B6;&#x6001;&#x540C;&#x6B65;&#x5FEB;&#x7167;&#x5141;&#x8BB8;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x5FEB;&#x901F;&#x52A0;&#x5165;&#x7F51;&#x7EDC;&#x800C;&#x65E0;&#x9700;&#x91CD;&#x64AD;&#x5386;&#x53F2;&#x5757;&#xFF0C;&#x800C;&#x662F;&#x4E0B;&#x8F7D;&#x5E76;&#x5E94;&#x7528;&#x7ED9;&#x5B9A;&#x9AD8;&#x5EA6;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x72B6;&#x6001;&#x5FEB;&#x7167;&#x3002;</span>
+<span class="hljs-section">[state-sync]</span>
+
+<span class="hljs-comment"># snapshot-interval specifies the block interval at which local state sync snapshots are</span>
+<span class="hljs-comment"># taken (0 to disable). Must be a multiple of pruning-keep-every.</span>
+<span class="hljs-comment"># snapshot-interval &#x6307;&#x5B9A;&#x62CD;&#x6444;&#x672C;&#x5730;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x5FEB;&#x7167;&#x7684;&#x5757;&#x95F4;&#x9694;&#xFF08;0 &#x8868;&#x793A;&#x7981;&#x7528;&#xFF09;&#x3002; </span>
+<span class="hljs-comment"># &#x5FC5;&#x987B;&#x662F; pruning-keep-every &#x7684;&#x500D;&#x6570;&#x3002;</span>
+<span class="hljs-attr">snapshot-interval</span> = <span class="hljs-number">0</span>
+
+<span class="hljs-comment"># snapshot-keep-recent specifies the number of recent snapshots to keep and serve (0 to keep all).</span>
+<span class="hljs-comment"># snapshot-keep-recent &#x6307;&#x5B9A;&#x8981;&#x4FDD;&#x7559;&#x670D;&#x52A1;&#x7684;&#x6700;&#x8FD1;&#x5FEB;&#x7167;&#x7684;&#x6570;&#x91CF;&#xFF08;0 &#x8868;&#x793A;&#x5168;&#x90E8;&#x4FDD;&#x7559;&#xFF09;&#x3002;</span>
+<span class="hljs-attr">snapshot-keep-recent</span> = <span class="hljs-number">2</span>
+</code></pre>
+<h3 id="wasm-vm&#x5185;&#x5B58;&#x914D;&#x7F6E;">wasm vm&#x5185;&#x5B58;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-toml"><span class="hljs-section">[wasm]</span>
+<span class="hljs-comment"># The maximum gas amount can be spent for contract query.</span>
+<span class="hljs-comment"># The contract query will invoke contract execution vm,</span>
+<span class="hljs-comment"># so we need to restrict the max usage to prevent DoS attack</span>
+<span class="hljs-comment"># &#x5408;&#x7EA6;&#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x6D88;&#x8017;&#x7684;&#x6700;&#x5927;gas&#x91CF;&#x3002;&#x5408;&#x7EA6;&#x67E5;&#x8BE2;&#x4F1A;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x6267;&#x884C;vm&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9650;&#x5236;&#x6700;&#x5927;&#x4F7F;&#x7528;&#x91CF;&#x6765;&#x9632;&#x6B62;DoS&#x653B;&#x51FB;</span>
+<span class="hljs-attr">contract-query-gas-limit</span> = <span class="hljs-string">&quot;10000000&quot;</span>
+
+<span class="hljs-comment"># The WASM VM memory cache size in MiB not bytes</span>
+<span class="hljs-comment"># &#x4EE5; MiB &#x4E3A;&#x5355;&#x4F4D;&#x7684; WASM VM &#x5185;&#x5B58;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B57;&#x8282; </span>
+<span class="hljs-attr">contract-memory-cache-size</span> = <span class="hljs-string">&quot;0&quot;</span>
+
+<span class="hljs-comment"># The WASM VM memory cache size in number of cached modules. Can safely go up to 15, but not recommended for validators</span>
+<span class="hljs-comment"># &#x7F13;&#x5B58;&#x6A21;&#x5757;&#x6570;&#x4E2D;&#x7684; WASM VM &#x5185;&#x5B58;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#x3002; &#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x5730;&#x589E;&#x52A0;&#x5230; 15&#xFF0C;&#x4F46;&#x4E0D;&#x5EFA;&#x8BAE;&#x9A8C;&#x8BC1;&#x8005;&#x4F7F;&#x7528;</span>
+<span class="hljs-attr">contract-memory-enclave-cache-size</span> = <span class="hljs-string">&quot;0&quot;</span>
+</code></pre>
+<h3 id="&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
 <pre><code class="lang-toml">###############################################################################
 ###                                &#x57FA;&#x672C;&#x914D;&#x7F6E;                                  ###
 ###############################################################################
@@ -836,7 +1106,7 @@ contract-memory-enclave-cache-size = &quot;0&quot;
 
             
                 
-                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 配置解析">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 配置解析">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -852,7 +1122,7 @@ contract-memory-enclave-cache-size = &quot;0&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"app配置解析","level":"3.1.1","depth":2,"next":{"title":"config配置解析","level":"3.1.2","depth":2,"path":"配置解析/config配置解析.md","ref":"./配置解析/config配置解析.md","articles":[]},"previous":{"title":"配置解析","level":"3.1","depth":1,"path":"配置解析/README.md","ref":"./配置解析/README.md","articles":[{"title":"app配置解析","level":"3.1.1","depth":2,"path":"配置解析/app配置解析.md","ref":"./配置解析/app配置解析.md","articles":[]},{"title":"config配置解析","level":"3.1.2","depth":2,"path":"配置解析/config配置解析.md","ref":"./配置解析/config配置解析.md","articles":[]},{"title":"client配置解析","level":"3.1.3","depth":2,"path":"配置解析/client配置解析.md","ref":"./配置解析/client配置解析.md","articles":[]},{"title":"genesis配置解析","level":"3.1.4","depth":2,"path":"配置解析/genesis配置解析.md","ref":"./配置解析/genesis配置解析.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"配置解析/app配置解析.md","mtime":"2022-07-11T09:27:50.771Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-12T02:37:25.922Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"app配置解析","level":"3.1.1","depth":2,"next":{"title":"config配置解析","level":"3.1.2","depth":2,"path":"配置解析/config配置解析.md","ref":"./配置解析/config配置解析.md","articles":[]},"previous":{"title":"配置解析","level":"3.1","depth":1,"path":"配置解析/README.md","ref":"./配置解析/README.md","articles":[{"title":"app配置解析","level":"3.1.1","depth":2,"path":"配置解析/app配置解析.md","ref":"./配置解析/app配置解析.md","articles":[]},{"title":"config配置解析","level":"3.1.2","depth":2,"path":"配置解析/config配置解析.md","ref":"./配置解析/config配置解析.md","articles":[]},{"title":"client配置解析","level":"3.1.3","depth":2,"path":"配置解析/client配置解析.md","ref":"./配置解析/client配置解析.md","articles":[]},{"title":"genesis配置解析","level":"3.1.4","depth":2,"path":"配置解析/genesis配置解析.md","ref":"./配置解析/genesis配置解析.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"配置解析/app配置解析.md","mtime":"2022-07-25T03:48:23.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-25T08:05:49.341Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
