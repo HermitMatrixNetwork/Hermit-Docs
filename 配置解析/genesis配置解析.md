@@ -139,7 +139,7 @@ bank模块负责处理账户之间的多资产代币转账,有如下参数可以
             "address": "ghm15v4z6h7wjcrdx0pygxyvk3naaupgk6a64lfkt8",
             "coins": [
                 {
-                    "denom": "uGHM",
+                    "denom": "ughm",
                     "amount": "10000000000000"
                 }
             ]
@@ -185,7 +185,7 @@ bank模块负责处理账户之间的多资产代币转账,有如下参数可以
 ```json
 "crisis": {
     "constant_fee": {
-        "denom": "uGHM",
+        "denom": "ughm",
         "amount": "1000"
     }
 },
@@ -290,7 +290,7 @@ communitytax  + baseproposerreward +bonusproposerreward 之和不能超过 1.00
                   "key": "Ne9/LZwimJqDEC76u6v394b8UJcO6I4vGwTIr4ej7b4="
                 },
                 "value": {
-                  "denom": "uGHM",
+                  "denom": "ughm",
                   "amount": "100000000"
                 }
               }
@@ -318,7 +318,7 @@ communitytax  + baseproposerreward +bonusproposerreward 之和不能超过 1.00
             "fee": {
               "amount": [
                 {
-                  "denom": "uGHM",
+                  "denom": "ughm",
                   "amount": "50000"
                 }
               ],
@@ -368,7 +368,7 @@ communitytax  + baseproposerreward +bonusproposerreward 之和不能超过 1.00
     "deposit_params": {
         "min_deposit": [
             {
-                "denom": "uGHM",
+                "denom": "ughm",
                 "amount": "10000000"
             }
         ],
@@ -451,7 +451,7 @@ communitytax  + baseproposerreward +bonusproposerreward 之和不能超过 1.00
 
 | Key                 | Type            | Example                |
 | :------------------ | :-------------- | :--------------------- |
-| MintDenom           | string          | "uGHM"                 |
+| MintDenom           | string          | "ughm"                 |
 | InflationRateChange | string (dec)    | "0.130000000000000000" |
 | InflationMax        | string (dec)    | "0.200000000000000000" |
 | InflationMin        | string (dec)    | "0.070000000000000000" |
@@ -480,7 +480,7 @@ max_token_supply  全网最大供应量
         "annual_provisions": "0.000000000000000000"
     },
     "params": {
-        "mint_denom": "uGHM",
+        "mint_denom": "ughm",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -585,7 +585,7 @@ MinCommissionRate 最低佣金率
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "uGHM"
+        "bond_denom": "ughm"
       },
       "last_total_power": "0",
       "last_validator_powers": [],

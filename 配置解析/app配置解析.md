@@ -29,7 +29,7 @@ app.toml 配置文件路径：  .ghmd/config/app.toml
 # specified in this config (e.g. 0.25token1;0.0001token2).
 # 验证人处理交易的最低可接受的 gas-prices
 # 交易费用必须满足此配置中指定的任何面额的最低要求
-minimum-gas-prices = "0.0125uGHM"
+minimum-gas-prices = "0.0125ughm"
 
 # default: the last 100 states are kept in addition to every 500th state; pruning at 10 block intervals
 # nothing: all historic states will be saved, nothing will be deleted (i.e. archiving node)
@@ -319,7 +319,7 @@ contract-memory-enclave-cache-size = "0"
 ###                                基本配置                                  ###
 ###############################################################################
 # 验证器处理交易的最低 gas prices
-minimum-gas-prices = "0.0125uGHM"
+minimum-gas-prices = "0.0125ughm"
 
 # 修剪策略配置
 # default: 以10个块为间隔进行修剪
