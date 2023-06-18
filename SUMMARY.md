@@ -3,7 +3,6 @@
 - [Hermit网络概述](./Hermit网络概述/README.md)
   - [GHM代币](./Hermit网络概述/GHM代币.md)
   - [隐私代币](./Hermit网络概述/隐私代币.md)
-  - [View_key介绍](./Hermit网络概述/View_key.md)
 
 - [密钥管理](./密钥管理/README.md)
   - [概述](./密钥管理/概述.md)
