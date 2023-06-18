@@ -84,7 +84,7 @@ ghmd config node tcp://45.32.116.172:26657
 ```bash
 ghmd init banana --chain-id ghmdev
 # - banana 就是节点的名字， 可以自己去，可以是 caca, any, kfuk, 
-# - chain-id  参数就是你要加入的链名称，现在测试网叫 ghmdev
+# - chain-id  参数就是你要加入的链名称，现在主网为Hermit
 ```
 
 3. 创建一个钱包，这个钱包的地址用来管理节点，是这个节点的管理员。
